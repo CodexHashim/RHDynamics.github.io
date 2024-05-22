@@ -16,6 +16,14 @@
             overflow: hidden;
             padding: 10px;
         }
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
         .topnav input[type=text] {
             float: right;
             padding: 6px;
@@ -27,14 +35,6 @@
         }
         .topnav input[type=text]::placeholder {
             color: #ccc;
-        }
-        .topnav a {
-            float: left;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
         }
         .topnav a:hover {
             background-color: #ddd;
@@ -86,6 +86,40 @@
             font-size: 14px;
             color: #666;
             text-align: center;
+            margin-bottom: 10px;
+        }
+        .book-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .book-btn:hover {
+            background-color: #45a049;
+        }
+        @media screen and (max-width: 600px) {
+            .topnav a, .topnav input[type=text] {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 5px 0;
+            }
+            .topnav input[type=text] {
+                margin-top: 10px;
+                padding: 10px;
+                width: calc(100% - 32px); /* Adjust for padding */
+            }
+            .topnav .pharmacy-name {
+                float: none;
+                display: block;
+                text-align: center;
+                margin: 10px 0;
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -101,77 +135,44 @@
     <div class="med-container" id="medContainer">
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Rabez</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
             <div class="med-name">Omee</div>
-            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Medication%201">Omee</a>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="med-description">Description of Omee.</div>
+            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Omee" class="book-btn">Book</a>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
             <div class="med-name">Aciloc</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="med-description">Description of Aciloc.</div>
+            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Aciloc" class="book-btn">Book</a>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 1</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="med-name">Rabez DSR</div>
+            <div class="med-description">Description of Rabez DSR.</div>
+            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Rabez%20DSR" class="book-btn">Book</a>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 1</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="med-name">Itanazole</div>
+            <div class="med-description">Description of Itanazole.</div>
+            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Itanazole" class="book-btn">Book</a>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">rabez</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 1</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 1</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 1</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 1</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 1</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 1</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="med-name">Coflet</div>
+            <div class="med-description">Description of Coflet.</div>
+            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Coflet" class="book-btn">Book</a>
         </div>
         <!-- Add more medication cards here -->
     </div>
 
     <script>
         function filterMeds() {
-            // Declare variables
             var input, filter, medCards, medName, i, txtValue;
             input = document.getElementById('searchInput');
             filter = input.value.toUpperCase();
             medCards = document.getElementsByClassName('med-card');
 
-            // Loop through all medication cards, hide those that don't match the search query
             for (i = 0; i < medCards.length; i++) {
                 medName = medCards[i].getElementsByClassName('med-name')[0];
                 txtValue = medName.textContent || medName.innerText;
