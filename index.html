@@ -94,75 +94,94 @@
         <a class="active" href="#home">Home</a>
         <a href="#account">Account</a>
         <a href="#booking">Booking</a>
-        <input type="text" placeholder="Search...">
+        <input type="text" id="searchInput" onkeyup="filterMeds()" placeholder="Search...">
         <div class="pharmacy-name">Nissa Medicos</div>
     </div>
 
-    <div class="med-container">
+    <div class="med-container" id="medContainer">
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
             <div class="med-name">Medication 1</div>
             <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
-
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 2</div>
-            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 3</div>
+            <div class="med-name">Medication 1</div>
+            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Medication%201">Book Medication 1</a>
             <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 3</div>
+            <div class="med-name">Medication 1</div>
             <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 3</div>
+            <div class="med-name">Medication 1</div>
             <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 3</div>
+            <div class="med-name">Medication 1</div>
             <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 3</div>
+            <div class="med-name">rabez</div>
             <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 3</div>
+            <div class="med-name">Medication 1</div>
             <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 3</div>
+            <div class="med-name">Medication 1</div>
             <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 3</div>
+            <div class="med-name">Medication 1</div>
             <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 3</div>
+            <div class="med-name">Medication 1</div>
             <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <div class="med-card">
             <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Medication 3</div>
+            <div class="med-name">Medication 1</div>
             <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
-
-        <!-- Add more medication cards here as needed -->
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 1</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+        <!-- Add more medication cards here -->
     </div>
+
+    <script>
+        function filterMeds() {
+            // Declare variables
+            var input, filter, medCards, medName, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            medCards = document.getElementsByClassName('med-card');
+
+            // Loop through all medication cards, hide those that don't match the search query
+            for (i = 0; i < medCards.length; i++) {
+                medName = medCards[i].getElementsByClassName('med-name')[0];
+                txtValue = medName.textContent || medName.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    medCards[i].style.display = '';
+                } else {
+                    medCards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
