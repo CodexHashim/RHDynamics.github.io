@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nissa Medicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+            padding: 10px;
+        }
+        .topnav input[type=text] {
+            float: right;
+            padding: 6px;
+            margin-top: 8px;
+            margin-right: 16px;
+            border: none;
+            font-size: 17px;
+            width: 200px;
+        }
+        .topnav input[type=text]::placeholder {
+            color: #ccc;
+        }
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .topnav .pharmacy-name {
+            float: left;
+            color: #f2f2f2;
+            font-size: 24px;
+            margin-top: 10px;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .med-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .med-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .med-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .med-name {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .med-description {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#account">Account</a>
+        <a href="#booking">Booking</a>
+        <input type="text" placeholder="Search...">
+        <div class="pharmacy-name">Nissa Medicos</div>
+    </div>
+
+    <div class="med-container">
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 1</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 2</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 3</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 3</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 3</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 3</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 3</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 3</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 3</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 3</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 3</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+        <div class="med-card">
+            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
+            <div class="med-name">Medication 3</div>
+            <div class="med-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        </div>
+
+        <!-- Add more medication cards here as needed -->
+    </div>
+</body>
+</html>
