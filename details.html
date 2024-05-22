@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Product Details</h1>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Product Name:</strong> {{ details['Product Name'] }}</li>
+            <li class="list-group-item"><strong>Price:</strong> {{ details['Price'] }}</li>
+            <li class="list-group-item"><strong>MFG Date:</strong> {{ details['MFG Date'] }}</li>
+            <li class="list-group-item"><strong>EXP Date:</strong> {{ details['EXP Date'] }}</li>
+            <li class="list-group-item"><strong>Inventory Name:</strong> {{ details['Inventory Name'] }}</li>
+        </ul>
+    </div>
+</body>
+</html>
