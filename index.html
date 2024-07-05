@@ -3,186 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nissa Medicos - Your trusted pharmacy for all medications.">
     <title>Nissa Medicos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .topnav {
-            background-color: #333;
-            overflow: hidden;
-            padding: 10px;
-        }
-        .topnav a {
-            float: left;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-        .topnav input[type=text] {
-            float: right;
-            padding: 6px;
-            margin-top: 8px;
-            margin-right: 16px;
-            border: none;
-            font-size: 17px;
-            width: 200px;
-        }
-        .topnav input[type=text]::placeholder {
-            color: #ccc;
-        }
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .topnav a.active {
-            background-color: #4CAF50;
-            color: white;
-        }
-        .topnav .pharmacy-name {
-            float: left;
-            color: #f2f2f2;
-            font-size: 24px;
-            margin-top: 10px;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-        .med-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .med-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 20px;
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .med-image {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        .med-name {
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        .med-description {
-            font-size: 14px;
-            color: #666;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        .book-btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .book-btn:hover {
-            background-color: #45a049;
-        }
-        @media screen and (max-width: 600px) {
-            .topnav a, .topnav input[type=text] {
-                float: none;
-                display: block;
-                text-align: left;
-                width: 100%;
-                margin: 5px 0;
-            }
-            .topnav input[type=text] {
-                margin-top: 10px;
-                padding: 10px;
-                width: calc(100% - 32px); /* Adjust for padding */
-            }
-            .topnav .pharmacy-name {
-                float: none;
-                display: block;
-                text-align: center;
-                margin: 10px 0;
-                font-size: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    
+
+    
 </head>
 <body>
-    <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#account">Account</a>
-        <a href="#booking">Booking</a>
-        <input type="text" id="searchInput" onkeyup="filterMeds()" placeholder="Search...">
-        <div class="pharmacy-name">Nissa Medicos</div>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="med-container" id="medContainer">
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Omee</div>
-            <div class="med-description">Description of Omee.</div>
-            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Omee" class="book-btn">Book</a>
-        </div>
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Aciloc</div>
-            <div class="med-description">Description of Aciloc.</div>
-            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Aciloc" class="book-btn">Book</a>
-        </div>
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Rabez DSR</div>
-            <div class="med-description">Description of Rabez DSR.</div>
-            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Rabez%20DSR" class="book-btn">Book</a>
-        </div>
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Itanazole</div>
-            <div class="med-description">Description of Itanazole.</div>
-            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Itanazole" class="book-btn">Book</a>
-        </div>
-        <div class="med-card">
-            <img class="med-image" src="https://via.placeholder.com/150" alt="Medication Image">
-            <div class="med-name">Coflet</div>
-            <div class="med-description">Description of Coflet.</div>
-            <a href="https://wa.me/8638875149?text=Booking%20confirmation:%20Coflet" class="book-btn">Book</a>
-        </div>
-        <!-- Add more medication cards here -->
-    </div>
+    <main id="home">
+        <section id="hero">
+            <div class="carousel">
+                <img src="https://images.unsplash.com/photo-1547489432-cf93fa6c71ee?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 1" class="visible">
+                <img src="https://plus.unsplash.com/premium_photo-1661766456250-bbde7dd079de?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 2">
+                <img src="https://images.unsplash.com/photo-1576765607924-3f7b8410a787?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 3">
+            </div>
+            <div class="hero-content">
+                <h1 id="mytext">Welcome_to_Nissa_Medicos</h1>
+                <p>Your trusted pharmacy for all medications.</p>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://unpkg.com/split-type"></script>
+                <script>
+                    const myText = new SplitType('#mytext');
+                    gsap.to('.char', {
+                        y: 0,
+                        stagger: 0.1,
+                        delay: 1,
+                        repeat: -1,
+                        repeatDelay: 1,
+                        ease: "power1.inOut",
+                        duration: 1
+                    });
+                </script>
+            
+            </div>
 
-    <script>
-        function filterMeds() {
-            var input, filter, medCards, medName, i, txtValue;
-            input = document.getElementById('searchInput');
-            filter = input.value.toUpperCase();
-            medCards = document.getElementsByClassName('med-card');
+            
+        </section>
 
-            for (i = 0; i < medCards.length; i++) {
-                medName = medCards[i].getElementsByClassName('med-name')[0];
-                txtValue = medName.textContent || medName.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    medCards[i].style.display = '';
-                } else {
-                    medCards[i].style.display = 'none';
-                }
-            }
-        }
-    </script>
+        <section id="search">
+            <h1 >Find Your Medicine</h1>
+            <form action="" method="get">
+                <label for="medicine-search">Search for medicine:</label>
+                <input type="text" id="medicine-search" name="medicine-search" placeholder="Enter medicine name">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section id="available-meds">
+            <h2>Available Medications</h2>
+            <div class="med-card-container">
+                <div class="med-card">
+                    <div class="med-card-inner">
+                        <div class="med-card-front">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2022/8/CW/BB/DS/129887935/paracetamol-tablets-500-mg-500x500.jpeg" alt="Paracetamol">
+                            <h3>Paracetamol</h3>
+                        </div>
+                        <div class="med-card-back">
+                            <h3>Paracetamol</h3>
+                            <p>Used for pain relief and fever reduction.</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="order-now">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="med-card">
+                    <div class="med-card-inner">
+                        <div class="med-card-front">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/325863554/WI/JM/SY/135658020/ibuprofen-tablets-ip-200-mg-.jpg" alt="Ibuprofen">
+                            <h3>Ibuprofen</h3>
+                        </div>
+                        <div class="med-card-back">
+                            <h3>Ibuprofen</h3>
+                            <p>Used for pain relief, fever reduction, and anti-inflammatory purposes.</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="order-now">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="med-card">
+                    <div class="med-card-inner">
+                        <div class="med-card-front">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/325863554/WI/JM/SY/135658020/ibuprofen-tablets-ip-200-mg-.jpg" alt="Ibuprofen">
+                            <h3>Ibuprofen</h3>
+                        </div>
+                        <div class="med-card-back">
+                            <h3>Ibuprofen</h3>
+                            <p>Used for pain relief, fever reduction, and anti-inflammatory purposes.</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="order-now">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="med-card">
+                    <div class="med-card-inner">
+                        <div class="med-card-front">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/325863554/WI/JM/SY/135658020/ibuprofen-tablets-ip-200-mg-.jpg" alt="Ibuprofen">
+                            <h3>Ibuprofen</h3>
+                        </div>
+                        <div class="med-card-back">
+                            <h3>Ibuprofen</h3>
+                            <p>Used for pain relief, fever reduction, and anti-inflammatory purposes.</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="order-now">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="med-card">
+                    <div class="med-card-inner">
+                        <div class="med-card-front">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/325863554/WI/JM/SY/135658020/ibuprofen-tablets-ip-200-mg-.jpg" alt="Ibuprofen">
+                            <h3>Ibuprofen</h3>
+                        </div>
+                        <div class="med-card-back">
+                            <h3>Ibuprofen</h3>
+                            <p>Used for pain relief, fever reduction, and anti-inflammatory purposes.</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="order-now">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more medicine cards as needed -->
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are committed to providing the best pharmacy services and a wide range of medications to meet your health needs.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Prescription Medications</li>
+                <li>Over-the-counter Medications</li>
+                <li>Health and Wellness Products</li>
+                <li>Consultations</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <address>
+                <p>123 Pharmacy Street, Medico City</p>
+                <p>Email: info@nissamedicos.com</p>
+                <p>Phone: +123-456-7890</p>
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nissa Medicos. All rights reserved.</p>
+    </footer>
+
+    <!-- Ensure script is loaded after the DOM elements -->
+    <script src="index.js"></script>
 </body>
 </html>
